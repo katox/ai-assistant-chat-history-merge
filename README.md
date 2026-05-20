@@ -153,21 +153,3 @@ Use this tool at your own risk.
 
 JetBrains workspace internals are not documented for this use case, so this project is based on observation and guesswork. It appears to work, but you should always back up your original workspace and settings directories before replacing anything.
 
-## Suggested workflow
-
-1. Quit the IDE completely.
-2. Move the existing old workspace out of the way, for example:
-
-   ```bash
-   mv workspace workspace.orig
-   ```
-
-3. Move the merged workspace into place:
-
-   ```bash
-   mv merged workspace
-   ```
-
-4. Start the IDE again.
-
-The IDE should now open using the merged workspace data.
