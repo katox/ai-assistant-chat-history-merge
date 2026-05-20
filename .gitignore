@@ -1,0 +1,5 @@
+*.iml
+.idea/
+merged/
+workspace/
+workspace.old/

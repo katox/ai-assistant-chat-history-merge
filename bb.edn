@@ -1,0 +1,14 @@
+{:deps  {org.clojure/data.xml {:mvn/version "0.2.0-alpha9"}}
+
+ :paths ["."]
+
+ :tasks
+ {:requires ([babashka.fs :as fs])
+
+  merge
+  {:doc  "Merge AI chat/workspace XML files. Usage: bb merge <project-search-string> [old-workspace-dir] [new-workspace-dir] [--debug] [--target-uuid UUID]"
+   :task (apply shell "bb merge-ai-chats.bb" *command-line-args*)}
+
+  clean
+  {:doc  "Remove generated merged XML output."
+   :task (fs/delete-tree "merged")}}}
